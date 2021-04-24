@@ -19,10 +19,13 @@ pipeline {
     }
     
     post {
-    success {
-        mail to: 'kartheek.c@zoho.com',
-             subject: "Sucess Pipeline: ${currentBuild.fullDisplayName}",
-             body: "Things are fine with ${env.BUILD_URL}"
+        always {
+            echo 'One way or another, I have finished'
+        }
+        success {
+            mail to: 'kartheek.c@zoho.com',
+                 subject: "Sucess Pipeline: ${currentBuild.fullDisplayName}",
+                 body: "Things are fine with ${env.BUILD_URL}"
+        }
     }
-}
 }
