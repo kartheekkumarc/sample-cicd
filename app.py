@@ -12,7 +12,7 @@ app = Flask(__name__)
 # the associated function. 
 @app.route('/') 
 # ‘/’ URL is bound with hello_world() function. 
-def hello_world(): 
+def hello_world()
     return '<h1>Hello World from CloudDevOpsTV!<h1><br /><h4>If you see this message that means you have successfully deployed the code</h4>';
 @app.route('/users')
 def users():
