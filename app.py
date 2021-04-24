@@ -16,7 +16,7 @@ def hello_world():
     return '<h1>Hello World from CloudDevOpsTV!<h1><br /><h4>If you see this message that means you have successfully deployed the code</h4>';
 @app.route('/users')
 def users():
-    return '/Users Path Invoked.'
+    return '/Users Path Invoked.';
       
 # main driver function 
 if __name__ == '__main__': 
