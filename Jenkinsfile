@@ -17,4 +17,12 @@ pipeline {
             }
         }
     }
+    
+    post {
+    success {
+        mail to: 'team@example.com',
+             subject: "Sucess Pipeline: ${currentBuild.fullDisplayName}",
+             body: "Things are fine with ${env.BUILD_URL}"
+    }
+}
 }
